@@ -12,6 +12,7 @@ import {
   zora,
 } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
+import { ChakraProvider } from '@chakra-ui/react'
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [
@@ -40,11 +41,14 @@ const wagmiConfig = createConfig({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
+    <ChakraProvider>
     <WagmiConfig config={wagmiConfig} >
-      <RainbowKitProvider  chains={chains} theme={darkTheme()} >
+      <RainbowKitProvider  chains={chains}  >
         <Component {...pageProps} />
       </RainbowKitProvider>
     </WagmiConfig>
+    </ChakraProvider>
+
   );
 }
 

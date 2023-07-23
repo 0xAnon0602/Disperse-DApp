@@ -2,6 +2,8 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import { Text } from '@chakra-ui/react';
+
 
 const Home: NextPage = () => {
   return (
@@ -18,9 +20,32 @@ const Home: NextPage = () => {
         <div className={styles.buttonContainer} >
           <ConnectButton />
         </div>
+        
+        <div  className={styles.main}>
+        <Text
+        bgGradient='linear(to-l, #39FF14, #0D7377)'
+        bgColor='black'
+        bgClip='text'
+        fontSize='7xl'
+        fontWeight='extrabold'
+         >
+        Token Airdrop Dpp
+        </Text>
 
+        <Text
+        bgGradient='linear(to-l, #39FF13, #0D7377)'
+        bgColor='black'
+        bgClip='text'
+        fontSize='xl'
+        fontWeight='bold'
+         >
+        A dapp to airdrop tokens to multiple wallets
+        </Text>
+
+        </div>
 
     </div>
+
   );
 };
 
