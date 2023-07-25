@@ -16,10 +16,12 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-top: 6%;
   }
   
   .textarea {
     width: 50%;
+    margin-top: -2%;
     margin-left: 25%;
     color: #1B9F58;
   }
@@ -30,9 +32,13 @@
     background-color:black;
   }
   .thirdButton {
-    margin-left: 8%;
+    margin-left: 15%;
   }
   
+  .fourthButton {
+    margin-top: 5%;
+    margin-left: 40%;
+  }
   
   .footer {
     display: flex;
