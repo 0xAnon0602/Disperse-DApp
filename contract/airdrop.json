@@ -1,0 +1,43 @@
+{
+    "address":"0xF77cE462B55fC9ADDf82104ADfE0994E61bc2Ff7",
+    "abi":[
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "owner",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "recipients",
+                    "type": "address[]"
+                },
+                {
+                    "name": "values",
+                    "type": "uint256[]"
+                }
+            ],
+            "name": "airdropNative",
+            "outputs": [],
+            "payable": true,
+            "stateMutability": "payable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        }
+    ]
+}
