@@ -54,7 +54,7 @@ export const Main = () => {
 
     console.log(window.ethereum.networkVersion)
 
-    if (window.ethereum.networkVersion != chainId) {
+    if ( parseInt(window.ethereum.networkVersion) !== chainId) {
       await changeNetwork()
     }
 
@@ -215,7 +215,6 @@ export const Main = () => {
 		var toSend=0
 		var finalValues=[]
 		var finalAddresses=[]
-		var isBalanceGreater=false
 
 		for(var z of Values){
 			toSend+=parseFloat(z)
@@ -226,7 +225,6 @@ export const Main = () => {
     console.log(toSend/10**18,accountBalance)
 
 		if(toSend/10**18>accountBalance){
-			isBalanceGreater=true
 			setInputError('Not enough balance')
 		}
 
